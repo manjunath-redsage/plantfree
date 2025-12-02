@@ -91,7 +91,7 @@ export default function LoginPage() {
             if (data.success) {
                 setSuccessMessage('OTP verified successfully!');
                 setTimeout(() => {
-                    router.push('/');
+                    router.push('/Home');
                 }, 1500);
             } else {
                 setErrors({ form: data.message || 'Invalid OTP' });
@@ -216,7 +216,7 @@ export default function LoginPage() {
                 )}
 
                 <div className="login-footer">
-                    <Link href="/" className="back-link">
+                    <Link href="/Home" className="back-link">
                         ← Back to home
                     </Link>
                 </div>
